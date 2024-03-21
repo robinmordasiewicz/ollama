@@ -1,0 +1,29 @@
+{
+  "name": "ollama",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu22.04",
+  "features": {
+    "ghcr.io/devcontainers/features/nvidia-cuda:1": {
+      "installCudnn": true,
+      "installCudnnDev": true,
+      "installNvtx": true,
+      "installToolkit": true,
+      "cudaVersion": "12.2",
+      "cudnnVersion": "8.9.7.29"
+    },
+    "ghcr.io/prulloac/devcontainer-features/ollama:1": {},
+  },
+  "hostRequirements": {
+    "gpu": true
+  },
+  "postCreateCommand": "./.devcontainer/postCreateCommand.sh",
+  "appPort": [
+    "11434:11434"
+  ],
+  "containerEnv": {
+	  "OLLAMA_HOST": "0.0.0.0"
+  },
+  "runArgs": [ "--network=ollama", "--name", "ollama", "--gpus=all"],
+  "mounts": [
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ollama,target=/root/.ollama,type=bind,consistency=cached"
+  ]
+}
