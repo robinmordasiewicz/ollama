@@ -12,6 +12,7 @@
     },
     "ghcr.io/prulloac/devcontainer-features/ollama:1": {}
   },
+  "shutdownAction": "none",
   "hostRequirements": {
     "gpu": true
   },
