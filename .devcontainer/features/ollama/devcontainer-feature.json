@@ -1,7 +1,7 @@
 {
   "name": "ollama",
   "id": "ollama",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Installs ollama",
   "documentationURL": "https://github.com/prulloac/devcontainer-features/tree/main/src/ollama",
   "options": {
@@ -13,7 +13,7 @@
   },
   "entrypoint": "ollama serve",
   "installsAfter": [
-    "ghcr.io/devcontainers/features/common-utils"
+    "ghcr.io/devcontainers/features/nvidia-cuda"
   ],
   "mounts": [
     {
