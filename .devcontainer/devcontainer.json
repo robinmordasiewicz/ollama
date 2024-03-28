@@ -1,6 +1,7 @@
 {
   "name": "ollama",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu20.04",
+  "initializeCommand": "docker pull mcr.microsoft.com/devcontainers/base:ubuntu20.04",
   "features": {
     "ghcr.io/devcontainers/features/nvidia-cuda:1": {
       "cudaVersion": "12.2"
