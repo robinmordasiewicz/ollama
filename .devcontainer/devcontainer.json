@@ -10,7 +10,12 @@
       "cudaVersion": "12.2",
       "cudnnVersion": "8.9.7.29"
     },
-    "ghcr.io/prulloac/devcontainer-features/ollama:1": {}
+    "ghcr.io/prulloac/devcontainer-features/ollama:1": {},
+    "./features/preinstall-extensions": {
+      "extensions": [
+        "Maimonator.gpu-monitor"
+      ]
+    }
   },
   "shutdownAction": "none",
   "hostRequirements": {
