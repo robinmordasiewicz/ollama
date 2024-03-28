@@ -5,12 +5,13 @@
     "ghcr.io/devcontainers/features/nvidia-cuda:1": {
       "cudaVersion": "12.2"
     },
-    "./features/preinstall-extensions": {
+    "ghcr.io/robinmordasiewicz/features/preinstall-extensions:0": {
       "extensions": [
         "Maimonator.gpu-monitor"
       ]
     },
-    "./features/ollama": {
+    "ghcr.io/jungaretti/features/make:1": {},
+    "ghcr.io/robinmordasiewicz/features/ollama:0": {
       "models": [
         "codellama:34b",
         "dolphin-mixtral:8x7b",
