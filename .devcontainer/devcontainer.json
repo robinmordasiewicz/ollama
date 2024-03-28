@@ -1,19 +1,30 @@
 {
   "name": "ollama",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu22.04",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu20.04",
   "features": {
     "ghcr.io/devcontainers/features/nvidia-cuda:1": {
-      "installCudnn": true,
-      "installCudnnDev": true,
-      "installNvtx": true,
-      "installToolkit": true,
-      "cudaVersion": "12.2",
-      "cudnnVersion": "8.9.7.29"
+      "cudaVersion": "12.2"
     },
-    "ghcr.io/prulloac/devcontainer-features/ollama:1": {},
     "./features/preinstall-extensions": {
       "extensions": [
         "Maimonator.gpu-monitor"
+      ]
+    },
+    "./features/ollama": {
+      "models": [
+        "codellama:34b",
+        "dolphin-mixtral:8x7b",
+        "llama2:13b",
+        "llama2-uncensored:7b",
+        "mistral:latest",
+        "mistral-openorca",
+        "mixtral:instruct",
+        "nomic-embed-text",
+        "nous-hermes2-mixtral:8x7b",
+        "stable-code:instruct",
+        "stable-code:3b-instruct-q8_0",
+        "starcoder:3b",
+        "starcoder2:3b"
       ]
     }
   },
@@ -21,15 +32,10 @@
   "hostRequirements": {
     "gpu": true
   },
-  "postCreateCommand": "./.devcontainer/postCreateCommand.sh",
-  "appPort": [
-    "11434:11434"
-  ],
-  "containerEnv": {
-	  "OLLAMA_HOST": "0.0.0.0"
-  },
-  "runArgs": [ "--network=ollama", "--name", "ollama", "--gpus=all"],
-  "mounts": [
-    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ollama,target=/root/.ollama,type=bind,consistency=cached"
+  "runArgs": [
+    "--name=ollama",
+    "--hostname=ollama",
+    "--gpus=all",
+    "--net=host"
   ]
 }
