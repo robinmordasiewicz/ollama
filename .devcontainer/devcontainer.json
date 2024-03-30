@@ -3,6 +3,7 @@
     "ghcr.io/devcontainers/features/nvidia-cuda": {
       "cudaVersion": "12.2"
     },
+    "ghcr.io/iterative/features/nvtop:1": {},
     "ghcr.io/robinmordasiewicz/features/ollama": {
       "models": [
         "codellama:34b",
