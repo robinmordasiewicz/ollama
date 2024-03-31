@@ -1,43 +1,14 @@
 {
   "features": {
-    "ghcr.io/devcontainers/features/nvidia-cuda": {
-      "cudaVersion": "12.2"
-    },
-    "ghcr.io/iterative/features/nvtop": {},
-    "ghcr.io/robinmordasiewicz/features/ollama": {
-      "models": [
-        "codellama:34b",
-        "dolphin-mixtral:8x7b",
-        "llama2:13b",
-        "llama2-uncensored:7b",
-        "mistral:latest",
-        "mistral-openorca",
-        "mixtral:8x7b",
-        "nomic-embed-text",
-        "nous-hermes2-mixtral:8x7b",
-        "stable-code:latest",
-        "stable-code:3b-instruct-q8_0",
-        "starcoder:3b",
-        "starcoder2:3b"
-      ]
-    },
-    "ghcr.io/robinmordasiewicz/features/preinstall-extensions": {
-      "extensions": [
-        "Maimonator.gpu-monitor"
-      ]
-    }
+    "ghcr.io/robinmordasiewicz/features/ollama-persistence": {}
   },
-  "hostRequirements": {
-    "gpu": true
-  },
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu22.04",
-  "initializeCommand": "docker pull mcr.microsoft.com/devcontainers/base:ubuntu22.04",
+  "image": "ghcr.io/robinmordasiewicz/ollama:latest",
+  "initializeCommand": "docker pull ghcr.io/robinmordasiewicz/ollama:latest",
   "name": "ollama",
   "runArgs": [
     "--name=ollama",
     "--hostname=ollama",
     "--gpus=all",
     "--net=host"
-  ],
-  "shutdownAction": "none"
+  ]
 }
