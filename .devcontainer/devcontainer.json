@@ -3,6 +3,7 @@
     "ghcr.io/robinmordasiewicz/features/ollama-persistence": {
       "models": [
         "codellama:34b",
+        "deepseek-coder:6.7b-base",
         "dolphin-mixtral:8x7b",
         "llama2:13b",
         "llama2-uncensored:7b",
