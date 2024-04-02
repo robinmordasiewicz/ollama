@@ -1,6 +1,6 @@
 {
-  "image": "ghcr.io/robinmordasiewicz/ollama:latest",
-  "initializeCommand": "docker pull ghcr.io/robinmordasiewicz/ollama:latest",
+  "image": "docker.io/robinmordasiewicz/ollama:latest",
+  "initializeCommand": "docker pull docker.io/robinmordasiewicz/ollama:latest",
   "name": "ollama",
   "runArgs": [
     "--name=ollama",
