@@ -1,4 +1,24 @@
 {
+  "features": {
+    "ghcr.io/robinmordasiewicz/features/ollama-persistence": {
+      "models": [
+        "codellama:34b",
+        "deepseek-coder:6.7b-base",
+        "dolphin-mixtral:8x7b",
+        "llama2:13b",
+        "llama2-uncensored:7b",
+        "mistral:latest",
+        "mistral-openorca",
+        "mixtral:8x7b",
+        "nomic-embed-text",
+        "nous-hermes2-mixtral:8x7b",
+        "stable-code:latest",
+        "stable-code:3b-instruct-q8_0",
+        "starcoder:3b",
+        "starcoder2:3b"
+      ]
+    }
+  },
   "image": "docker.io/robinmordasiewicz/ollama:latest",
   "initializeCommand": "docker pull docker.io/robinmordasiewicz/ollama:latest",
   "name": "ollama",
